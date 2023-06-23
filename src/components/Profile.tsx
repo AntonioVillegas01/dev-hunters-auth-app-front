@@ -17,14 +17,12 @@ const Profile: React.FC<UserProfileCardProps> = ({ name, email }) => {
             minHeight: '100vh',
         };
 
-    const cardContent ={
-            textAlign: 'center',
-        };
+
 
     return (
         <div style={cardContainer}>
             <Card>
-                <CardContent style={cardContent}>
+                <CardContent >
                     <Typography variant="h5" component="h2">
                         Name: {name}
                     </Typography>
