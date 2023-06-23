@@ -49,12 +49,12 @@ const RegistrationForm = () => {
                         navigate("/");
                     });
                 })
-                .catch(() => {
+                .catch((e) => {
                     // devuelve statusCode y message
                     setLoading(false);
                     Swal.fire({
                         title: "Error!",
-                        text: "Usuario o contraseña incorrecta",
+                        text: `${e.msg}`,
                         icon: "error",
                         confirmButtonText: "Aceptar",
                     });

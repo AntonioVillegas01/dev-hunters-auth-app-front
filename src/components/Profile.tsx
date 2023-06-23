@@ -1,31 +1,30 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+
 
 interface UserProfileCardProps {
     name: string;
     email: string;
 }
 
-const useStyles = makeStyles(() => ({
-    cardContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-    },
-    cardContent: {
-        textAlign: 'center',
-    },
-}));
 
 const Profile: React.FC<UserProfileCardProps> = ({ name, email }) => {
-    const classes = useStyles();
+
+    const cardContainer = {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+        };
+
+    const cardContent ={
+            textAlign: 'center',
+        };
 
     return (
-        <div className={classes.cardContainer}>
+        <div style={cardContainer}>
             <Card>
-                <CardContent className={classes.cardContent}>
+                <CardContent style={cardContent}>
                     <Typography variant="h5" component="h2">
                         Name: {name}
                     </Typography>
